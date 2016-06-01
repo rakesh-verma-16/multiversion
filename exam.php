@@ -59,6 +59,7 @@ $root_id = $root->getId();
 $array1 = array();
 //Array to store the parents of revision_c2
 $array2 = array();
+//getting parents of first node revision using recursion
 $gettingpar = new intree($graph);
 $item = $gettingpar->getVertexParent($rev_c1);
 while($item->getId()!=$root_id){
@@ -66,7 +67,7 @@ while($item->getId()!=$root_id){
     $array1[$parent_name] = 'Blue';
     $item = $gettingpar->getVertexParent($item);
 }
-
+//getting parents of second node revision using recursion
 $parentnode2 = new intree($graph);
 $parent2 = $parentnode2->getVertexParent($rev_c2);
 while ($parent2->getId() !== $root_id){
