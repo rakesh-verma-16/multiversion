@@ -55,7 +55,9 @@ $root = $one;
 $rev_c1 = $eleven;
 $rev_c2 = $five;
 $root_id = $root->getId();
+//Array to store the parents of revision_c1
 $array1 = array();
+//Array to store the parents of revision_c2
 $array2 = array();
 $gettingpar = new intree($graph);
 $item = $gettingpar->getVertexParent($rev_c1);
